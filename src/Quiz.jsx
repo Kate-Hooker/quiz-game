@@ -1,4 +1,4 @@
-const Quiz = () => {
+const Quiz = ({questions}) => {
   return (
     <div className="quiz-container">
       
