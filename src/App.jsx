@@ -1,14 +1,8 @@
 //import './App.css'
+import Quiz from './Quiz'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className='App'>
-      Hi there
-    </div>
-
-  )
+  return <Quiz />
 }
 
 export default App
