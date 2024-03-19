@@ -5,7 +5,7 @@ $bg-accent: lightgrey;
 $disabled: grey;
 $foreground: black;
 
-.quiz-container {
+body {
   font-family: monospace;
   background: linear-gradient(0deg, $primary 0.03%, $accent);
   color: $foreground;
@@ -14,4 +14,8 @@ $foreground: black;
   margin: auto;
   padding: 0 30px;
   height: 100vh;
+}
+
+.quiz-container {
+
 }
