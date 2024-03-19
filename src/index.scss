@@ -7,7 +7,7 @@ $foreground: black;
 
 .quiz-container {
   font-family: monospace;
-  background: linear-gradient(0deg, $primary0.03%, $accent);
+  background: linear-gradient(0deg, $primary 0.03%, $accent);
   color: $foreground;
   display: flex;
   justify-content: center;
