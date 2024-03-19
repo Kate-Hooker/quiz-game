@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 const Quiz = ({ questions }) => {
-  const [currentQuestion, setCurrentQuestion] = useState()
+  const [currentQuestion, setCurrentQuestion] = useState(0)
 
   const { question, choices, correctAnswer } = questions[currentQuestion]
 
