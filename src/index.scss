@@ -5,3 +5,13 @@ $bg-accent: lightgrey;
 $disabled: grey;
 $foreground: black;
 
+.quiz-container {
+  font-family: monospace;
+  background: linear-gradient(0deg, $primary0.03%, $accent);
+  color: $foreground;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 0 30px;
+  height: 100vh;
+}
