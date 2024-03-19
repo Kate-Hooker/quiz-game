@@ -23,5 +23,16 @@ body {
   margin-top: 100px;
   padding: 30px 60px;
   box-sizing: border-box;
-
 }
+
+  .active-question-no {
+    font-size: 30px;
+    font-weight: 500;
+    color: $primary;
+  }
+
+  .total-questions {
+    font-size: 18px;
+    color: $disabled;
+  }
+
