@@ -3,9 +3,16 @@ import { useState } from 'react'
 const Quiz = ({ questions }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
 
+  const [answerIdx, setAnswerIdx] = useState(null)
+  const [answer, setAnswer] = useState('')
+
   const { question, choices, correctAnswer } = questions[currentQuestion]
 
-  const onAnswerClick = (answer, index) => {}
+  const onAnswerClick = (answer, index) => {
+    setAnswerIdx(index)
+    if (answer === correctAnswer) {
+    }
+  }
 
   return (
     <div className="quiz-container">
