@@ -29,7 +29,9 @@ const Quiz = ({ questions }) => {
               onClick={() => onAnswerClick(answer, index)}
               key={answer}
               className={answerIdx === index ? 'selected-answer' : null}
-            ></li>
+            >
+              {answer}
+            </li>
           ))}
         </ul>
       </>
