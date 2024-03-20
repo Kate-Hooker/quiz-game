@@ -25,7 +25,11 @@ const Quiz = ({ questions }) => {
         <h2>{question}</h2>
         <ul>
           {choices.map((answer, index) => (
-            <li onClick={() => onAnswerClick(answer, index)} key={answer}></li>
+            <li
+              onClick={() => onAnswerClick(answer, index)}
+              key={answer}
+              className={answerIdx === index ? 'selected-answer' : null}
+            ></li>
           ))}
         </ul>
       </>
