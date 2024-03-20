@@ -6,6 +6,14 @@ const Quiz = ({ questions }) => {
   const [answerIdx, setAnswerIdx] = useState(null)
   const [answer, setAnswer] = useState(null)
 
+  const onClickNext = () => {
+    setAnswerIdx(null)
+    setAnswer(null)
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1)
+    }
+  }
+
   const { question, choices, correctAnswer } = questions[currentQuestion]
 
   const onAnswerClick = (answer, index) => {
@@ -35,7 +43,7 @@ const Quiz = ({ questions }) => {
           ))}
         </ul>
         <div className="footer">
-          <button>
+          <button onClick={onClickNext} disabled={answerIdx === null}>
             {currentQuestion === questions.length - 1 ? 'Finish' : 'Next'}
           </button>
         </div>
