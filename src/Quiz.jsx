@@ -7,6 +7,7 @@ const Quiz = ({ questions }) => {
   const [answerIdx, setAnswerIdx] = useState(null)
   const [answer, setAnswer] = useState(null)
   const [result, setResult] = useState(resultInitialState)
+  const [showResult, setShowResult] = useState(false)
 
   const onClickNext = () => {
     setAnswerIdx(null)
@@ -27,6 +28,7 @@ const Quiz = ({ questions }) => {
       setCurrentQuestion((prev) => prev + 1)
     } else {
       setCurrentQuestion(0)
+      setShowResult(true)
     }
   }
 
