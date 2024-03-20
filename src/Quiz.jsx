@@ -1,17 +1,32 @@
 import { useState } from 'react'
+import { resultInitialState } from './costants'
 
 const Quiz = ({ questions }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
 
   const [answerIdx, setAnswerIdx] = useState(null)
   const [answer, setAnswer] = useState(null)
-  const [result, setResult] = useState()
+  const [result, setResult] = useState(resultInitialState)
 
   const onClickNext = () => {
     setAnswerIdx(null)
-    setAnswer(null)
-    if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1)
+    setResult((prev) =>
+      answer
+        ? {
+            ...prev,
+            score: prev.score + 5,
+            correctAnswers: prev.correctAnswers + 1,
+          }
+        : {
+            ...prev,
+            wrongAnswers: prev.wrongAnswers + 1,
+          }
+    )
+
+    if (currentQuestion !== questions.length - 1) {
+      setCurrentQuestion((prev) => prev + 1)
+    } else {
+      setCurrentQuestion(0)
     }
   }
 
