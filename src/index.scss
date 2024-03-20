@@ -57,8 +57,14 @@ body {
       padding: 11px;
       margin-top: 15px;
       cursor: pointer;
-
     }
+
+    .selected-answer {
+      background: $primary;
+      color: $bg;
+      border: 1px solid $accent;
+    }
+
   }
 
   
