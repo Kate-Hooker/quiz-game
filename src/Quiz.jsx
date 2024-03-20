@@ -5,6 +5,7 @@ const Quiz = ({ questions }) => {
 
   const [answerIdx, setAnswerIdx] = useState(null)
   const [answer, setAnswer] = useState(null)
+  const [result, setResult] = useState()
 
   const onClickNext = () => {
     setAnswerIdx(null)

@@ -237,3 +237,9 @@ export const jsQuizz = {
     },
   ],
 }
+
+export const resultInitialState = {
+  score: 0,
+  wrongAnswers: 0,
+  correctAnswers: 0,
+}
